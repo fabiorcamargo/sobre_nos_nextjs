@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-// import { socials } from '../constants';
+import Script from 'next/script';
 
 import styles from '../styles';
 import { footerVariants } from '../utils/motion';
@@ -19,7 +19,11 @@ const Footer = () => (
         <h4 className="font-bold md:text-[64px] text-[44px] text-white">
           Equipe de Colaboradores
         </h4>
-        <button type="button" className="flex items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]">
+        <button
+          type="button"
+          className="flex items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]"
+          aria-label="Junte-se à equipe"
+        >
           <img
             src="/arrow.svg"
             alt="headset"
@@ -43,7 +47,7 @@ const Footer = () => (
             PROFISSIONALIZA EAD
           </h4>
           <p className="font-normal text-[14px] text-white opacity-50">
-            Copyright © 2014 - 2024 Profissionaliza EAD. Todos os direitos Reservados.
+            Copyright © 2014 - 2024 Profissionaliza EAD. Todos os direitos reservados.
           </p>
 
           {/* <div className="flex gap-4">
@@ -60,6 +64,20 @@ const Footer = () => (
         </div>
       </div>
     </div>
+
+    {/* Script do Chatwoot carregado corretamente no Next.js */}
+    <Script
+      strategy="lazyOnload"
+      src="https://chat.profissionalizaead.com.br/packs/js/sdk.js"
+      onLoad={() => {
+        if (typeof window !== 'undefined' && window.chatwootSDK) {
+          window.chatwootSDK.run({
+            websiteToken: '5DmcKF5a6CgjabJNhHsQGYDr',
+            baseUrl: 'https://chat.profissionalizaead.com.br',
+          });
+        }
+      }}
+    />
   </motion.footer>
 );
 
