@@ -66,7 +66,7 @@ const Footer = () => (
     </div>
 
     {/* Script do Chatwoot carregado corretamente no Next.js */}
-    <Script
+    {/* <Script
       strategy="lazyOnload"
       src="https://chat.profissionalizaead.com.br/packs/js/sdk.js"
       onLoad={() => {
@@ -77,7 +77,7 @@ const Footer = () => (
           });
         }
       }}
-    />
+    /> */}
   </motion.footer>
 );
 
