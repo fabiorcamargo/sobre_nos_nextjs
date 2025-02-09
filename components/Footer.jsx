@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Script from 'next/script';
+// import Script from 'next/script';
 
 import styles from '../styles';
 import { footerVariants } from '../utils/motion';
