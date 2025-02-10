@@ -79,7 +79,7 @@ const Hero = () => {
               </p>
               <div className="flex justify-end gap-2">
                 <a
-                  href="https://nwdsk.co/c17SA"
+                  href="https://wa.me/message/ZQW6XHYT6UVGI1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green hover:bg-blue-700 text-white font-medium py-2 px-4 rounded"
